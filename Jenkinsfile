@@ -48,7 +48,7 @@ pipeline {
 
     stage("Test on Debian") {
       agent {
-        docker 'openjdk:8u151-jre'
+        sudo docker 'openjdk:8u151-jre'
       }
       steps {
         sh "wget http://karthik89me1.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
